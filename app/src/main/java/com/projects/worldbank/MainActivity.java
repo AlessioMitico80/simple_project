@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class MainActivity extends AppCompatActivity {
     int contatore;
     TextView display;
-    Button add,sub,nextpag;
+    Button add,sub,nextpag,nothing;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +20,7 @@ public class MainActivity extends AppCompatActivity {
         add= (Button) findViewById(R.id.ag);
         sub= (Button) findViewById(R.id.sot);
         nextpag= (Button) findViewById(R.id.suc);
+        nothing = (Button) findViewById(R.id.not);
         display = (TextView) findViewById(R.id.tV);
         add.setOnClickListener(new View.OnClickListener() {
             @Override
