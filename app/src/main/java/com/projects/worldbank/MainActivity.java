@@ -3,45 +3,51 @@ package com.projects.worldbank;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.webkit.WebView;
+import android.widget.ImageView;
+
 
 public class MainActivity extends AppCompatActivity {
-    int contatore;
-    TextView display;
-    Button add,sub,nextpag,nothing;
+
+    ImageView iv;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        contatore=0;
-        add= (Button) findViewById(R.id.ag);
-        sub= (Button) findViewById(R.id.sot);
-        nextpag= (Button) findViewById(R.id.suc);
-        nothing = (Button) findViewById(R.id.not);
-        display = (TextView) findViewById(R.id.tV);
-        add.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                contatore++; // aumenta di uno
-                display.setText("Il totale è " + contatore); // aggiorna la vista
-            }
-        });
-        sub.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                contatore--; // diminuisci di uno
-                display.setText("Il totale è " + contatore); // aggiorna la vista
-            }
-        });
-        nextpag.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent np = new Intent(getApplicationContext(),Main2Activity.class); // inizializza l'intent per passare dalla prima pagina alla successiva
-                startActivity(np);
-            }
-        });
+        getSupportActionBar().setLogo(R.drawable.world_bank);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+
+        //WebView worldbank= (WebView) findViewById(R.id.webView1);
+        //worldbank.loadUrl("http://www.worldbank.org/en/who-we-are");
+
+        iv = (ImageView) findViewById(R.id.imageView);
+        iv.setImageResource(R.drawable.wb);
     }
+    @Override
+        public boolean onCreateOptionsMenu(Menu menu){
+            getMenuInflater().inflate(R.menu.menu_di_scelta,menu);
+            return true;
+        }
+    @Override
+        public boolean onOptionsItemSelected(MenuItem item){
+
+            int id= item.getItemId();
+            switch(id) {
+                case R.id.Menu_1:
+                    Intent int1= new Intent(getApplicationContext(),Main2Activity.class); // inizializza l'intent per passare dalla prima pagina alla successiva
+                    startActivity(int1);
+
+                case R.id.Menu_2:
+
+                case R.id.Menu_3:
+
+                case R.id.Menu_4:
+            }
+            return false;
+        }
+
 }

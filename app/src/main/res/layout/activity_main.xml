@@ -4,85 +4,20 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".MainActivity"
+    >
 
-    <TextView
-        android:id="@+id/tV"
-        android:layout_width="0dp"
-        android:layout_height="60dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginEnd="95dp"
-        android:layout_marginRight="95dp"
-        android:layout_marginBottom="24dp"
-        android:text="Il totale è 0"
-        android:textSize="45dp"
-        app:layout_constraintBottom_toTopOf="@+id/ag"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/ag"
-        android:layout_width="216dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:text="Aggiungi"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toTopOf="@+id/sot"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.497"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tV"
-        tools:layout_gravity="center" />
-
-
-    <Button
-        android:id="@+id/sot"
-        android:layout_width="216dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="10dp"
-        android:layout_marginBottom="282dp"
-        android:text="Sottrai"
-        android:textSize="20dp"
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="405dp"
+        android:layout_height="343dp"
+        android:layout_marginTop="192dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginBottom="196dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/ag" />
-
-    <Button
-        android:id="@+id/suc"
-        android:layout_width="246dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="209dp"
-        android:text="Pagina Successiva"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sot" />
-
-    <Button
-        android:id="@+id/not"
-        android:layout_width="246dp"
-        android:layout_height="55dp"
-        android:layout_marginStart="95dp"
-        android:layout_marginLeft="95dp"
-        android:layout_marginTop="76dp"
-        android:layout_marginEnd="70dp"
-        android:layout_marginRight="70dp"
-        android:layout_marginBottom="209dp"
-        android:text="Non fa nulla"
-        android:textSize="20dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/sot" />
-
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/wb" />
 </android.support.constraint.ConstraintLayout>
